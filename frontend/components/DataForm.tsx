@@ -8,7 +8,7 @@ export default function DataForm({ entityName, fields }: { entityName: string, f
     e.preventDefault();
     try {
       // Dynamically post to the correct entity route
-      await axios.post(`http://localhost:5000/api/data/${entityName}`, formData);
+      await axios.post(`https://dynamic-app-generator.onrender.com/api/data/${entityName}`, formData);
       alert("✅ Record Saved Successfully! Refresh the page to see it in the table.");
       setFormData({}); // Clear form
     } catch (error) {

@@ -13,7 +13,7 @@ export default function CsvImporter({ entityName }: { entityName: string }) {
     formData.append("file", file); // Attach the file
 
     try {
-      await axios.post(`http://localhost:5000/api/csv/${entityName}`, formData, {
+      await axios.post(`https://dynamic-app-generator.onrender.com/api/csv/${entityName}`, formData, {
         headers: { "Content-Type": "multipart/form-data" }
       });
       alert(`✅ CSV successfully imported into ${entityName}! Refresh the page to see the data.`);

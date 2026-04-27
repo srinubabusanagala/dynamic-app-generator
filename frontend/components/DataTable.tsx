@@ -6,7 +6,7 @@ export default function DataTable({ entityName, fields }: { entityName: string, 
 
   useEffect(() => {
     // Dynamically fetch data for whatever entity this is
-    axios.get(`http://localhost:5000/api/data/${entityName}`)
+    axios.get(`https://dynamic-app-generator.onrender.com/api/data/${entityName}`)
       .then(res => setRecords(res.data.data))
       .catch(err => console.error("Failed to fetch data", err));
   }, [entityName]);

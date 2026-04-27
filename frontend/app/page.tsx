@@ -20,7 +20,7 @@ export default function Home() {
   const [lang, setLang] = useState<"en" | "es">("en"); 
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/config")
+    axios.get("https://dynamic-app-generator.onrender.com")
       .then((response) => setConfig(response.data.data))
       .catch(() => setError("Failed to connect to backend engine."));
   }, []);
