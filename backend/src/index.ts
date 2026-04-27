@@ -12,7 +12,7 @@ import { pool, initDB } from './db';
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(cors({ origin: 'https://dynamic-app-generator-f3djfsbbl-srinubabusanagalas-projects.vercel.app' }));
 app.use(express.json());
 
 // --- NOTIFICATION ENGINE ---
