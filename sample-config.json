@@ -1,0 +1,27 @@
+{
+  "app_name": "Mini CRM Engine",
+  "version": "1.0",
+  "translations": {
+    "en": {
+      "management": "Management",
+      "loading": "Loading App Engine..."
+    },
+    "es": {
+      "management": "Gestión",
+      "loading": "Cargando el motor..."
+    }
+  },
+  "entities": [
+    {
+      "name": "customers",
+      "fields": [
+        { "name": "full_name", "type": "string", "required": true },
+        { "name": "email", "type": "string", "required": true },
+        { "name": "is_active", "type": "boolean", "required": false }
+      ],
+      "ui": {
+        "views": ["data_table", "creation_form", "csv_importer"]
+      }
+    }
+  ]
+}
